@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="demo_world">
+    <!-- Flat ground -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="ground_link">
+        <collision name="ground_collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="ground_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+	 <material>
+        <ambient>1 1 1 1</ambient>    <!-- White color -->
+        <diffuse>1 1 1 1</diffuse>    <!-- Same white tone for lighting -->
+      </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacles -->
+    <model name="obstacle1">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+        </visual>
+      </link>
+      <pose>1 1 0.25 0 0 0</pose>
+    </model>
+
+    <model name="obstacle2">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.5</size></box></geometry>
+        </visual>
+      </link>
+      <pose>-1 0.5 0.25 0 0 0</pose>
+    </model>
+
+	<include>
+		<uri>file:///home/ysmirza/project_ws/worlds/model_robo.sdf</uri>
+		<pose>0 0.1 0 0 0 0</pose>
+	</include>
+  </world>
+</sdf>

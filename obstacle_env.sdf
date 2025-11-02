@@ -1,0 +1,20 @@
+<?xml version="1.0" ?> 
+<sdf version="1.7"> 
+	<model name="model_robo"> 
+		<static>true</static> 
+		<link name="link">  
+			<visual name="visual"> 
+				<geometry> 
+					<cylinder>
+						<radius>0.3</radius>
+						<length>1.0</length>
+					</cylinder>   
+				</geometry> 
+					<material> 
+						<ambient>0 1 0</ambient> 
+					</material> 
+				</visual> 
+			</link> 
+		</model> 
+			 
+</sdf>
